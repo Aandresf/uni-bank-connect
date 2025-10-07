@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import bankInfo from "@/lib/bankInfo";
+import logoNoBg from "@/../Diseño/logo-no-background.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
+            <img src={logoNoBg} alt={`${bankInfo.shortName} logo`} className="h-10 w-auto mr-3" />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               {bankInfo.shortName}
             </span>

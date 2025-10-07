@@ -2,12 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Load brand font from Diseño folder */
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('../Diseño/Montserrat Alternates Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Paleta ajustada para Banco Universitario (basada en el BrandBoard). */
+    /* Si tienes los HSL/HEX exactos del BrandBoard los reemplazo exactamente. */
     --background: 210 40% 98%;
     --foreground: 215 25% 15%;
 
@@ -17,20 +28,21 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 215 80% 20%;
+    /* Primary: azul institucional (ej. azul profundo). */
+    --primary: 216 60% 31%;
     --primary-foreground: 0 0% 100%;
-    
-    --primary-light: 215 70% 40%;
-    --primary-glow: 215 90% 60%;
+    --primary-light: 216 55% 44%;
+    --primary-glow: 216 70% 58%;
 
-    --secondary: 195 85% 45%;
+    /* Secondary: color de acento (verde azulado suave) */
+    --secondary: 178 72% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 20% 92%;
-    --muted-foreground: 215 15% 45%;
+  --muted: 215 20% 92%;
+  --muted-foreground: 215 15% 45%;
 
-    --accent: 195 85% 45%;
-    --accent-foreground: 0 0% 100%;
+  --accent: 178 72% 35%;
+  --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -41,9 +53,9 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-hero: linear-gradient(135deg, hsl(215 80% 20%), hsl(215 70% 30%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(215 40% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(195 85% 45%), hsl(215 70% 40%));
+  --gradient-hero: linear-gradient(135deg, hsl(216 60% 31%), hsl(216 55% 44%));
+  --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 98%));
+  --gradient-accent: linear-gradient(135deg, hsl(178 72% 35%), hsl(216 55% 44%));
     
     --shadow-soft: 0 4px 24px -2px hsl(215 80% 20% / 0.08);
     --shadow-hover: 0 8px 32px -4px hsl(215 80% 20% / 0.12);

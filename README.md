@@ -36,6 +36,25 @@ npm i
 npm run dev
 ```
 
+Additional local notes for branding and fonts
+------------------------------------------------
+
+- The project uses the brand font located in `Diseño/Montserrat Alternates Regular.ttf`.
+- The CSS loads it from `src/index.css` via a `@font-face` rule. If you move the font, update the path in `src/index.css`.
+- Logos are in the `Diseño/` folder and are referenced directly from components (`Navbar` and `Footer`). If you prefer them in `src/assets`, copy the files there and update imports in `src/components/Navbar.tsx` and `src/components/Footer.tsx`.
+
+Run on Windows (cmd.exe)
+------------------------
+
+Open cmd.exe in the project folder and run:
+
+```
+npm install
+npm run dev
+```
+
+Then open the local URL that Vite prints (normally http://localhost:5173).
+
 **Edit a file directly in GitHub**
 
 - Navigate to the desired file(s).
