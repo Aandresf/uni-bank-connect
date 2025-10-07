@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import bankInfo from "@/lib/bankInfo";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,17 +27,17 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "contacto@unibanca.edu",
+      content: bankInfo.email,
     },
     {
       icon: Phone,
       title: "Teléfono",
-      content: "+1 (555) 123-4567",
+      content: bankInfo.phone,
     },
     {
       icon: MapPin,
       title: "Ubicación",
-      content: "Ciudad Universitaria, Campus Central",
+      content: bankInfo.address,
     },
   ];
 
@@ -80,9 +81,9 @@ const Contact = () => {
                 Horario de Atención
               </h3>
               <div className="space-y-2 text-muted-foreground">
-                <p>Lunes a Viernes: 8:00 AM - 8:00 PM</p>
-                <p>Sábados: 9:00 AM - 2:00 PM</p>
-                <p>Domingos: Cerrado</p>
+                <p>Lunes a Viernes: {bankInfo.hours.weekdays}</p>
+                <p>Sábados: {bankInfo.hours.saturday}</p>
+                <p>Domingos: {bankInfo.hours.sunday}</p>
               </div>
             </div>
           </div>

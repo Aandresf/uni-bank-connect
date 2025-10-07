@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import bankInfo from "@/lib/bankInfo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              UniBanca
+              {bankInfo.shortName}
             </span>
           </div>
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-banking.jpg";
+import bankInfo from "@/lib/bankInfo";
 
 const Hero = () => {
   return (
@@ -17,15 +18,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in">
-            Tu Futuro Financiero Comienza Aquí
+            {bankInfo.brandName}
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-fade-in">
-            La primera banca en línea diseñada especialmente para estudiantes universitarios.
-            Gestiona tu dinero de forma fácil, segura y sin complicaciones.
+            {"Servicios financieros accesibles e innovadores pensados para estudiantes universitarios."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
             <Button variant="hero" size="lg" className="text-lg">
-              Abrir Cuenta <ArrowRight className="ml-2" />
+              Abrir Cuenta en {bankInfo.shortName} <ArrowRight className="ml-2" />
             </Button>
             <Button
               variant="outline"

@@ -1,4 +1,5 @@
 import { Users, Shield, Smartphone } from "lucide-react";
+import bankInfo from "@/lib/bankInfo";
 
 const About = () => {
   const features = [
@@ -24,12 +25,10 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Sobre Nosotros
+            Sobre {""}{"Banco Universitario"}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            UniBanca nació con la misión de empoderar financieramente a la comunidad universitaria.
-            Entendemos los desafíos únicos que enfrentan los estudiantes y ofrecemos soluciones
-            bancarias diseñadas específicamente para sus necesidades.
+            {bankInfo.mission}
           </p>
         </div>
 

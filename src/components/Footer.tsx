@@ -1,5 +1,7 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
+import bankInfo from "@/lib/bankInfo";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -36,21 +38,24 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-bold mb-4">UniBanca</h3>
+            <h3 className="text-2xl font-bold mb-4">{bankInfo.shortName}</h3>
             <p className="text-primary-foreground/80 mb-6">
-              La banca digital diseñada para estudiantes universitarios.
+              La banca digital diseñada para la comunidad universitaria.
             </p>
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:shadow-glow transition-all duration-300 hover:scale-110"
-                >
-                  <social.icon className="w-5 h-5 text-secondary-foreground" />
-                </a>
-              ))}
+              {Object.entries(bankInfo.social).map(([key, href], index) => {
+                const Icon = [Facebook, Twitter, Instagram, Linkedin][index];
+                return (
+                  <a
+                    key={index}
+                    href={href}
+                    aria-label={key}
+                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:shadow-glow transition-all duration-300 hover:scale-110"
+                  >
+                    <Icon className="w-5 h-5 text-secondary-foreground" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -106,7 +111,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/80 text-sm">
-              © {currentYear} UniBanca. Todos los derechos reservados.
+              © {currentYear} {bankInfo.shortName}. Todos los derechos reservados.
             </p>
             <p className="text-primary-foreground/80 text-sm">
               Hecho con ❤️ para estudiantes
