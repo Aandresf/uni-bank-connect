@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Banco Universitario icon">
+  <defs>
+    <style>
+      .secondary{fill:#49beb7}
+    </style>
+  </defs>
+  <rect x="0" y="0" width="40" height="40" rx="8" class="secondary" />
+  <path d="M46 6 L76 6 L68 34 L46 34 Z" fill="#085f63" />
+</svg>

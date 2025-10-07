@@ -3,34 +3,33 @@ import { CreditCard, PiggyBank, TrendingUp, Wallet, GraduationCap, Gift } from "
 const Services = () => {
   const services = [
     {
-      icon: CreditCard,
-      title: "Cuenta Digital",
-      description: "Apertura 100% en línea sin requisitos complicados ni costos de apertura.",
+      icon: Wallet,
+      title: "Transferencias entre estudiantes sin comisión",
+      description:
+        "Transferencias rápidas, seguras y sin costo entre estudiantes universitarios.",
     },
     {
-      icon: Wallet,
-      title: "Tarjeta Virtual",
-      description: "Tarjeta de débito virtual instantánea para compras en línea seguras.",
+      icon: CreditCard,
+      title: "Depósitos en efectivo (24/7)",
+      description:
+        "Realiza depósitos en cualquiera de nuestras sucursales de forma sencilla y disponible las 24 horas, los 7 días.",
     },
     {
       icon: PiggyBank,
-      title: "Ahorro Inteligente",
-      description: "Herramientas de ahorro automático diseñadas para estudiantes.",
+      title: "Retiros en efectivo",
+      description: "Retiros rápidos y seguros en cualquiera de las sucursales del banco.",
     },
     {
-      icon: TrendingUp,
-      title: "Inversiones",
-      description: "Invierte desde montos pequeños y aprende sobre finanzas.",
-    },
-    {
-      icon: GraduationCap,
-      title: "Educación Financiera",
-      description: "Cursos y talleres gratuitos sobre manejo de finanzas personales.",
+      icon: CreditCard,
+      title: "Pago de matrícula estudiantil (online)",
+      description:
+        "Paga tu matrícula de forma rápida y sencilla en línea, disponible 24 horas del día.",
     },
     {
       icon: Gift,
-      title: "Beneficios Estudiantiles",
-      description: "Descuentos exclusivos y cashback en tiendas y servicios populares.",
+      title: "Cobro de becas estudiantiles",
+      description:
+        "Accede y cobra tus becas en cualquiera de nuestras sucursales de manera segura y eficiente.",
     },
   ];
 

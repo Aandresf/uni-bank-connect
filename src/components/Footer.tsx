@@ -1,17 +1,19 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 import bankInfo from "@/lib/bankInfo";
-import logoColor from "@/../Diseño/logo-color.png";
+// Logo moved to src/assets
+import logoColor from "@/assets/logo-color.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     productos: [
-      { label: "Cuenta Digital", href: "#" },
-      { label: "Tarjeta Virtual", href: "#" },
-      { label: "Ahorro", href: "#" },
-      { label: "Inversiones", href: "#" },
+      { label: "Transferencias entre estudiantes (sin comisión)", href: "#" },
+      { label: "Depósitos en efectivo (24/7)", href: "#" },
+      { label: "Retiros en efectivo", href: "#" },
+      { label: "Pago de matrícula online (24/7)", href: "#" },
+      { label: "Cobro de becas estudiantiles", href: "#" },
     ],
     ayuda: [
       { label: "Centro de Ayuda", href: "#" },
@@ -40,8 +42,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoColor} alt={`${bankInfo.shortName} logo`} className="h-10 w-auto" />
-              <h3 className="text-2xl font-bold">{bankInfo.shortName}</h3>
+              <img src={logoColor} alt="logo" className="h-10 w-auto" />
             </div>
             <p className="text-primary-foreground/80 mb-6">
               La banca digital diseñada para la comunidad universitaria.

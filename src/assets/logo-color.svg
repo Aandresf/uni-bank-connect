@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="64" viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Banco Universitario logo">
+  <defs>
+    <style>
+      .primary{fill:#085f63}
+      .secondary{fill:#49beb7}
+      .word{font-family: 'Montserrat Alternates', Arial, sans-serif; font-size:18px; fill:#085f63}
+    </style>
+  </defs>
+  <!-- simple icon -->
+  <rect x="4" y="8" width="40" height="40" rx="10" class="secondary" />
+  <polygon points="44,8 80,8 68,40 44,40" class="primary" opacity="0.95" />
+  <!-- wordmark -->
+  <text x="96" y="38" class="word">BANCO UNIVERSITARIO</text>
+</svg>

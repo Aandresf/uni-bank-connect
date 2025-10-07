@@ -1,22 +1,37 @@
-import { Users, Shield, Smartphone } from "lucide-react";
+import { Users, Send, DollarSign, BookOpen, Link2 } from "lucide-react";
 import bankInfo from "@/lib/bankInfo";
 
 const About = () => {
   const features = [
     {
       icon: Users,
-      title: "Para Estudiantes",
-      description: "Creada por universitarios, para universitarios",
+      title: "Servicio eficiente y de calidad",
+      description:
+        "Brindar a los estudiantes universitarios un servicio eficiente y de calidad en la gestión de sus recursos financieros, a través de nuestros canales digitales y nuestros puntos de atención presencial.",
     },
     {
-      icon: Shield,
-      title: "100% Seguro",
-      description: "Tecnología bancaria de última generación",
+      icon: Send,
+      title: "Fomento del uso digital",
+      description:
+        "Fomentar el uso de nuestras plataformas digitales para hacer transferencias entre estudiantes sin comisión, depósitos y retiros en efectivo, ofreciendo herramientas tecnológicas fáciles y seguras.",
     },
     {
-      icon: Smartphone,
-      title: "Totalmente Digital",
-      description: "Maneja tus finanzas desde cualquier lugar",
+      icon: BookOpen,
+      title: "Educación financiera",
+      description:
+        "Promover la educación financiera de los estudiantes universitarios, a través de charlas, talleres y capacitaciones sobre temas como el ahorro, la inversión y el uso responsable del crédito.",
+    },
+    {
+      icon: Link2,
+      title: "Alianzas estratégicas",
+      description:
+        "Establecer alianzas estratégicas con universidades y empresas para ofrecer beneficios exclusivos a nuestros clientes, tales como descuentos en matrículas, becas, prácticas laborales, entre otros.",
+    },
+    {
+      icon: DollarSign,
+      title: "Cultura de innovación",
+      description:
+        "Mantener una cultura de innovación y mejora continua en nuestros procesos, productos y servicios, para estar siempre a la vanguardia de las necesidades de nuestros clientes y del mercado.",
     },
   ];
 
@@ -32,7 +47,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-16">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-16">
           {features.map((feature, index) => (
             <div
               key={index}
