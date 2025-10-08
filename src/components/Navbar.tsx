@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import bankInfo from "@/lib/bankInfo";
 // Logo moved to src/assets
 import logoNoBg from "@/assets/logo-no-background.png";
@@ -9,7 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Inicio", href: "#hero" },
+    { label: "Inicio", href: "/" },
     { label: "Nosotros", href: "#about" },
     { label: "Misión y Visión", href: "#mission" },
     { label: "Servicios", href: "#services" },
@@ -27,18 +28,28 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <Button variant="hero" size="sm">
-                Acceder
-              </Button>
+              {navItems.map((item) =>
+                item.href.startsWith("/") ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {item.label}
+                  </a>
+                ),
+              )}
+              <Link to="/login">
+                <Button variant="hero" size="sm">Acceder</Button>
+              </Link>
             </div>
           </div>
 
@@ -59,20 +70,31 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-card border-t border-border">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary hover:bg-muted block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-foreground hover:text-primary hover:bg-muted block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-foreground hover:text-primary hover:bg-muted block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
             <div className="px-3 py-2">
-              <Button variant="hero" className="w-full">
-                Acceder
-              </Button>
+              <Link to="/login" onClick={() => setIsOpen(false)}>
+                <Button variant="hero" className="w-full">Acceder</Button>
+              </Link>
             </div>
           </div>
         </div>
